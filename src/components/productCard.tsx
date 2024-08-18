@@ -14,7 +14,7 @@ export default function ProductCard({ id, name, imageSrc, price }: ProductCardPr
     const { addToCart } = useCart();
 
     return (
-        <div className="bg-white max-w-xs w-full rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div className="bg-white max-w-md w-full rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
             <div className="p-4">
                 <div className="aspect-square w-full mb-4 flex bg-gray-100 rounded-lg overflow-hidden">
                     <Image
