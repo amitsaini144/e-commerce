@@ -16,8 +16,8 @@ const productImage: Product[] = [
   { id: 5, name: "Nike Sport shoes (Red)", imageSrc: "/images/shoes.png", price: "47,999" },
   { id: 6, name: "Moto G85 Plus", imageSrc: "/images/mobile.jpg", price: "17,999" },
   { id: 7, name: "Samsung Galaxy S22 (8GB, 128GB)", imageSrc: "/images/SamsungS23Ultra.jpeg", price: "49,999" },
-  { id: 8, name: "boAt Airdopes 71 w/ 40 HRS Playback, ENx Technology & Beast Mode(Low Latency) Bluetooth Headset  (Active Black, True Wireless)", imageSrc: "/images/boat-earphone.png", price: "899" },
-  { id: 9, name: "ZEBRONICS PSPK9 (County) Bluetooth Speaker with Built-in FM Radio ,Aux input 3 W Bluetooth Speaker  (Green, Mono Channel)", imageSrc: "/images/zebronics-speaker.png", price: "599" },
+  { id: 8, name: "Noise Wireless Earphones", imageSrc: "/images/tws.jpg", price: "1,899" },
+  { id: 9, name: "Sonos Speaker", imageSrc: "/images/speaker.png", price: "5999" },
 ]
 
 
