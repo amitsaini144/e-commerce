@@ -2,16 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { useCart } from '../context/CartContext';
 import { CiSquarePlus, CiSquareMinus } from "react-icons/ci";
+import { Product } from "../types";
 
-interface CartItemProps {
-    id: number;
-    name: string;
-    imageSrc: string;
-    price: string;
-    quantity: number;
-}
-
-export default function CartItem({ id, name, imageSrc, price, quantity }: CartItemProps) {
+export default function CartItem({ id, name, imageSrc, price, quantity }: Product) {
     const { updateQuantity, removeFromCart } = useCart();
 
     const handleQuantityChange = (newQuantity: number) => {
@@ -31,29 +24,31 @@ export default function CartItem({ id, name, imageSrc, price, quantity }: CartIt
                 />
             </div>
             <div className="flex-grow min-w-0">
-                <h3 className="text-lg font-semibold text-gray-800 truncate">{name}</h3>
-                <p className="text-sm text-gray-600 mb-2">₹{price}</p>
+                <h3 className="text-lg font-semibold text-gray-800 hover:text-[#2874f0] truncate">{name}</h3>
+                <p className="text-sm text-gray-800 mb-2">₹{price}</p>
                 <div className="flex items-center">
                     <button
-                        onClick={() => handleQuantityChange(quantity - 1)}
-                        className="text-2xl"
+                        onClick={() => handleQuantityChange(quantity! - 1)}
+                        className={`text-2xl ${quantity! <= 1 ? 'text-gray-400' : 'text-black'}`}
+                        disabled={quantity! <= 1}
                     >
                         <CiSquareMinus />
                     </button>
                     <span className="mx-2 text-gray-700">{quantity}</span>
                     <button
-                        onClick={() => handleQuantityChange(quantity + 1)}
-                        className="text-2xl"
+                        onClick={() => handleQuantityChange(quantity! + 1)}
+                        className={`text-2xl ${quantity! >= 10 ? 'text-gray-400' : 'text-black'}`}
+                        disabled={quantity! >= 10}
                     >
                         <CiSquarePlus />
                     </button>
                 </div>
             </div>
-            <div className="flex-shrink-0 ml-4 text-right">
-                <p className="text-lg font-bold text-gray-800">₹{(parseFloat(price.replace(/₹|,/g, '')) * quantity).toLocaleString('en-IN')}</p>
+            <div className="flex-shrink-0 ml-4 text-right flex flex-col gap-7">
+                <p className="text-lg font-bold text-gray-800">₹{(parseFloat(price.replace(/₹|,/g, '')) * quantity!).toLocaleString('en-IN')}</p>
                 <button
                     onClick={() => removeFromCart(id)}
-                    className="text-red-500 hover:text-red-600 text-sm mt-1"
+                    className="text-sm"
                 >
                     Remove
                 </button>
