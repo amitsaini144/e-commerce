@@ -11,7 +11,7 @@ export default function Navbar() {
     const isCartPage = pathname === '/cart';
 
     return (
-        <nav className="sticky top-0 left-0 right-0 z-50 shadow-sm backdrop-blur-xl">
+        <nav className="fixed top-0 left-0 right-0 z-50 shadow-sm backdrop-blur-xl bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <Link href='/' className="flex items-center">

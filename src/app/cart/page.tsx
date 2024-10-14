@@ -12,8 +12,8 @@ export default function Cart() {
   const { total, discount, savings, totalPriceBeforeDiscount } = getTotalPrice();
 
   return (
-    <div className="mx-auto px-4 py-8 bg-[#f1f3f6] min-h-screen flex flex-col">
-      <div className="flex-grow">
+    <div className="bg-[#f1f3f6] w-full min-h-screen">
+      <div className="container mx-auto pt-32 px-4 pb-24">
         <div className="bg-white rounded-md shadow-md p-6 h-full">
           {cart.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full">

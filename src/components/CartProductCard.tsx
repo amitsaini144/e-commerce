@@ -24,8 +24,8 @@ export default function CartItem({ id, name, imageSrc, price, quantity }: Produc
                 />
             </div>
             <div className="flex-grow min-w-0">
-                <h3 className="text-lg font-semibold text-gray-800 hover:text-[#2874f0] truncate">{name}</h3>
-                <p className="text-sm text-gray-800 mb-2">₹{price}</p>
+                <h3 className="md:text-lg font-semibold text-gray-800 hover:text-[#2874f0] truncate">{name}</h3>
+                <p className="text-[12px] md:text-sm text-gray-800 mb-2">₹{price}</p>
                 <div className="flex items-center">
                     <button
                         onClick={() => handleQuantityChange(quantity! - 1)}
@@ -45,7 +45,7 @@ export default function CartItem({ id, name, imageSrc, price, quantity }: Produc
                 </div>
             </div>
             <div className="flex-shrink-0 ml-4 text-right flex flex-col gap-7">
-                <p className="text-lg font-bold text-gray-800">₹{(parseFloat(price.replace(/₹|,/g, '')) * quantity!).toLocaleString('en-IN')}</p>
+                <p className="md:text-lg font-bold text-gray-800">₹{(parseFloat(price.replace(/₹|,/g, '')) * quantity!).toLocaleString('en-IN')}</p>
                 <button
                     onClick={() => removeFromCart(id)}
                     className="text-sm"

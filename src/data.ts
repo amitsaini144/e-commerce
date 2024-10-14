@@ -161,5 +161,4 @@ export const productImage: Product[] = [
         price: "8,199",
         rating: 4.5
     },
-
 ]

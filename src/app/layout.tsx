@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "../components/navbar";
 import { CartProvider } from "@/context/CartContext";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,10 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CartProvider>
-
         <body className={inter.className}>
           <Navbar />
-
           {children}
         </body>
       </CartProvider>

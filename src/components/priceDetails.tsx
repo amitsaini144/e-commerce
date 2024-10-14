@@ -6,20 +6,20 @@ export default function PriceDetails({ total, discount, savings, totalPriceBefor
             <h2 className="text-lg font-semibold border-b border-gray-200 pb-2 mb-4">PRICE DETAILS</h2>
             <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                    <p className="text-gray-600">Price</p>
-                    <p className="font-medium">₹{totalPriceBeforeDiscount.toLocaleString('en-IN')}</p>
+                    <p className="text-sm md:text-base text-gray-600">Price</p>
+                    <p className="text-sm md:text-base font-medium">₹{totalPriceBeforeDiscount.toLocaleString('en-IN')}</p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <p className="text-gray-600">Discount</p>
-                    <p className="text-green-600 font-medium">- ₹{discount.toLocaleString('en-IN')}</p>
+                    <p className="text-sm md:text-base text-gray-600">Discount</p>
+                    <p className="text-sm md:text-base text-green-600 font-medium">- ₹{discount.toLocaleString('en-IN')}</p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <p className="text-gray-600">Delivery Charges</p>
-                    <p className="text-green-600 font-medium">FREE</p>
+                    <p className="text-sm md:text-base text-gray-600">Delivery Charges</p>
+                    <p className="text-sm md:text-base text-green-600 font-medium">FREE</p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <p className="text-gray-600">Secured Packaging Fee</p>
-                    <p className="font-medium">₹129</p>
+                    <p className="text-sm md:text-base text-gray-600">Secured Packaging Fee</p>
+                    <p className="text-sm md:text-base font-medium">₹129</p>
                 </div>
                 <div className="flex justify-between items-center border-t border-gray-200 pt-3 mt-3">
                     <p className="font-semibold">Total Amount</p>

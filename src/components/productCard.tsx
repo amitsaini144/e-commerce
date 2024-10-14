@@ -9,18 +9,16 @@ export default function ProductCard({ id, name, imageSrc, price, rating }: Produ
     const { addToCart } = useCart();
 
     return (
-        <div className="bg-white max-w-md w-full rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 group">
             <div className="p-4">
-                <div className="aspect-square w-full mb-4 flex bg-gray-100 rounded-lg overflow-hidden">
+                <div className="relative aspect-square w-full mb-4 flex bg-gray-100 rounded-lg">
                     <Image
                         src={imageSrc}
-                        alt="product"
-                        width={100}
-                        height={100}
+                        alt={name}
+                        fill
                         loading="lazy"
                         placeholder="blur"
-                        className="object-cover w-full h-full rounded-lg "
-                        layout="responsive"
+                        className="object-cover w-full h-full rounded-lg"
                     />
                 </div>
                 <div className="flex flex-col gap-2 mb-4">
