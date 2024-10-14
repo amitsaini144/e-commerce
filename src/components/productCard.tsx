@@ -17,7 +17,9 @@ export default function ProductCard({ id, name, imageSrc, price, rating }: Produ
                         alt="product"
                         width={100}
                         height={100}
-                        className="object-cover w-full h-full rounded-lg"
+                        loading="lazy"
+                        placeholder="blur"
+                        className="object-cover w-full h-full rounded-lg "
                         layout="responsive"
                     />
                 </div>
