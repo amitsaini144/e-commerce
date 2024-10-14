@@ -2,13 +2,14 @@
 import React, { createContext, useState, useContext } from 'react';
 import { toast } from 'sonner'
 import { Product, PriceDetailsProps, CartContextType } from "../types";
+import { StaticImageData } from 'next/image';
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
     const [cart, setCart] = useState<Product[]>([]);
 
-    function addToCart(id: number, name: string, imageSrc: string, price: string) {
+    function addToCart(id: number, name: string, imageSrc: StaticImageData, price: string) {
         setCart(prevCart => {
             const existingItem = prevCart.find(item => item.id === id);
 
